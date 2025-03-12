@@ -31,8 +31,8 @@ class FoodCard extends StatelessWidget {
         child: Row(
           children: [
             const Padding(padding: EdgeInsets.all(10)),
-            // TODO: Implement image with rounded corners
-            // TODO: Add favorite icon button
+            // TODO: Implement image with rounded corners (yousef ahmed)
+            // TODO: Add favorite icon button (yousef ahmed)
             Row(
               children: [
                 Image.asset(
@@ -106,7 +106,7 @@ class FoodCard extends StatelessWidget {
                           }
                         },
                       ),
-                      // TODO: Add rating row
+                      // TODO: Add rating row (yousef ahmed)
                     ],
                   ),
                 ),
