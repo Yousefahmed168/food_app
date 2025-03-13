@@ -25,9 +25,7 @@ class FoodCard extends StatelessWidget {
         );
       },
       child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         child: Row(
           children: [
             const Padding(padding: EdgeInsets.all(10)),
@@ -35,11 +33,7 @@ class FoodCard extends StatelessWidget {
             // TODO: Add favorite icon button (yousef ahmed)
             Row(
               children: [
-                Image.asset(
-                  item.imageUrl,
-                  width: 150,
-                  height: double.infinity,
-                ),
+                Image.asset(item.imageUrl, width: 150, height: double.infinity),
                 Padding(
                   padding: const EdgeInsets.only(left: 20, top: 10),
                   child: Column(

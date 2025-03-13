@@ -1,4 +1,3 @@
-// models/food_item.dart
 class FoodItem {
   final String id;
   final String name;
@@ -6,6 +5,7 @@ class FoodItem {
   final String imageUrl;
   final String description;
   final String category;
+  final List<String> ingredients;
 
   const FoodItem({
     required this.id,
@@ -14,5 +14,6 @@ class FoodItem {
     required this.imageUrl,
     required this.description,
     required this.category,
+    required this.ingredients,
   });
 }

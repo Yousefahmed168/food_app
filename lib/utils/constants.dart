@@ -31,6 +31,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/burger.jpg',
     description: 'Juicy beef patty with fresh vegetables',
     category: 'Burgers',
+     ingredients: ['Cheese', 'Tomato Sauce', 'Dough'],
   ),
   FoodItem(
     id: '2',
@@ -39,6 +40,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/pizza.jpg',
     description: 'Traditional Italian pizza with fresh basil',
     category: 'Pizza',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '3',
@@ -47,6 +49,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/sushi.jpg',
     description: 'Crab, avocado, and cucumber roll',
     category: 'Sushi',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '4',
@@ -55,6 +58,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/salad.jpg',
     description: 'Grilled chicken with romaine lettuce and croutons',
     category: 'Salads',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '5',
@@ -63,6 +67,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/pasta.jpg',
     description: 'Creamy pasta with pancetta and parmesan',
     category: 'Pasta',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '6',
@@ -71,6 +76,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/cake.jpg',
     description: 'Rich chocolate layer cake',
     category: 'Desserts',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '7',
@@ -79,6 +85,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/wings.jpg',
     description: 'Crispy wings with smoky BBQ sauce',
     category: 'Appetizers',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '8',
@@ -87,6 +94,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/stirfry.jpg',
     description: 'Mixed vegetables in garlic sauce',
     category: 'Asian',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '9',
@@ -95,6 +103,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/tacos.jpg',
     description: 'Three soft tacos with seasoned beef',
     category: 'Mexican',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '10',
@@ -103,6 +112,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/smoothie.jpg',
     description: 'Fresh mango and yogurt blend',
     category: 'Drinks',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '11',
@@ -111,6 +121,7 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/cheese.jpg',
     description: 'Assorted cheeses with crackers',
     category: 'Appetizers',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
   FoodItem(
     id: '12',
@@ -119,5 +130,6 @@ const List<FoodItem> mockFoodItems = [
     imageUrl: 'assets/coffee.jpg',
     description: 'Cold brew with milk and sugar',
     category: 'Drinks',
+    ingredients: ['Beef', 'Lettuce', 'Cheese', 'Bun'],
   ),
 ];
