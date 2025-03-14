@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import '../models/food_item.dart';
 import '../utils/constants.dart';
 
@@ -27,58 +26,15 @@ class ItemDetailsScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // ✅ TODO: Create rating widget with stars (shahd mohamed)
-                    RatingBar.builder(
-                      initialRating: 4.5,
-                      minRating: 1,
-                      direction: Axis.horizontal,
-                      allowHalfRating: true,
-                      itemCount: 5,
-                      itemBuilder: (context, index) {
-                        switch (index) {
-                          case 0:
-                            return const Icon(
-                              Icons.sentiment_very_dissatisfied,
-                              color: Colors.red,
-                            );
-                          case 1:
-                            return const Icon(
-                              Icons.sentiment_dissatisfied,
-                              color: Colors.redAccent,
-                            );
-                          case 2:
-                            return const Icon(
-                              Icons.sentiment_neutral,
-                              color: Colors.amber,
-                            );
-                          case 3:
-                            return const Icon(
-                              Icons.sentiment_satisfied,
-                              color: Colors.lightGreen,
-                            );
-                          case 4:
-                            return const Icon(
-                              Icons.sentiment_very_satisfied,
-                              color: Colors.green,
-                            );
-                          default:
-                            return const Icon(
-                              Icons.sentiment_very_satisfied,
-                              color: Colors.green,
-                            );
-                        }
-                      },
-                      onRatingUpdate: (rating) {
-                        print("User Rating: $rating");
-                      },
-                    ),
+                    //TODO: Create rating widget with stars(shahd mohamed)
+                    const RatingWidget(rating: 4.5),
                     const SizedBox(height: 8),
                     Text(item.name, style: AppTextStyles.heading1),
                     const SizedBox(height: 8),
                     Text('\$${item.price}', style: AppTextStyles.priceText),
                     const SizedBox(height: 16),
 
-                    // ✅ TODO: Add ingredient list section (shahd mohamed)
+                    //// TODO: Add ingredient list section(shahd mohamed)
                     const Text(
                       'Ingredients:',
                       style: TextStyle(
@@ -87,16 +43,15 @@ class ItemDetailsScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    ...item.ingredients
-                        .map((ingredient) => Text('- $ingredient'))
-                        ,
+                    ...item.ingredients.map(
+                      (ingredient) => Text('- $ingredient'),
+                    ),
                     const SizedBox(height: 16),
-
-                    // ✅ TODO: Create quantity selector widget (shahd mohamed)
+                    //TODO: Create quantity selector widget(shahd mohamed)
                     const QuantitySelector(),
                     const SizedBox(height: 16),
 
-                    // ✅ TODO: Implement add to cart functionality (shahd mohamed)
+                    //TODO: Implement add to cart functionality(shahd mohamed)
                     ElevatedButton(
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
@@ -113,6 +68,24 @@ class ItemDetailsScreen extends StatelessWidget {
             ]),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class RatingWidget extends StatelessWidget {
+  final double rating;
+  const RatingWidget({super.key, required this.rating});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: List.generate(
+        5,
+        (index) => Icon(
+          index < rating ? Icons.star : Icons.star_border,
+          color: Colors.amber,
+        ),
       ),
     );
   }
@@ -143,3 +116,5 @@ class _QuantitySelectorState extends State<QuantitySelector> {
     );
   }
 }
+
+
