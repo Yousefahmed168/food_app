@@ -27,7 +27,7 @@ class ItemDetailsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     //TODO: Create rating widget with stars(shahd mohamed)
-                    RatingWidget(rating: 4.5),
+                    const RatingWidget(rating: 4.5),
                     const SizedBox(height: 8),
                     Text(item.name, style: AppTextStyles.heading1),
                     const SizedBox(height: 8),
@@ -43,13 +43,12 @@ class ItemDetailsScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    ...item.ingredients
-                        .map((ingredient) => Text('- $ingredient'))
-                        .toList(),
+                    ...item.ingredients.map(
+                      (ingredient) => Text('- $ingredient'),
+                    ),
                     const SizedBox(height: 16),
-
                     //TODO: Create quantity selector widget(shahd mohamed)
-                    QuantitySelector(),
+                    const QuantitySelector(),
                     const SizedBox(height: 16),
 
                     //TODO: Implement add to cart functionality(shahd mohamed)
