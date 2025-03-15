@@ -23,7 +23,19 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('Removed from favorites'),
-        duration: Duration(seconds: 3),
+        duration: Duration(seconds: 1),
+      ),
+    );
+  }
+
+  void addFavorite(FoodItem item) {
+    setState(() {
+      favorites.add(item);
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Added to favorites'),
+        duration: Duration(seconds: 1),
       ),
     );
   }

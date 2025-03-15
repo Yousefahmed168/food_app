@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../models/food_item.dart';
 
 class AppColors {
-  static const Color primary = Color(0xFFFF6B6B);
-  static const Color secondary = Color(0xFF4ECDC4);
+  static const Color primary = Color(0xEA0B94E3);
+  static const Color secondary = Color(0xC742D1C8);
   static const Color dark = Color(0xFF2D3436);
   static const Color gray = Color(0xFFADADAD);
 }

@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import '../models/food_item.dart';
 import '../utils/constants.dart';
 
@@ -79,14 +81,21 @@ class RatingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: List.generate(
-        5,
-        (index) => Icon(
-          index < rating ? Icons.star : Icons.star_border,
-          color: Colors.amber,
-        ),
+    return RatingBar.builder(
+      initialRating: rating,
+      minRating: 1,
+      direction: Axis.horizontal,
+      allowHalfRating: true,
+      itemCount: 5,
+      itemBuilder: (context, _) => const Icon(
+        Icons.star,
+        color: Colors.amber,
       ),
+      onRatingUpdate: (rating) {
+        if (kDebugMode) {
+          print(rating);
+        }
+      },
     );
   }
 }

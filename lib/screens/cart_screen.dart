@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import '../utils/constants.dart';
 
+
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
 
@@ -36,6 +37,8 @@ class _CartScreenState extends State<CartScreen> {
       'imageUrl': 'assets/salad.jpg',
       'quantity': 1,
     },
+    
+
   ];
 
   void updateQuantity(int index, int value) {
@@ -43,6 +46,7 @@ class _CartScreenState extends State<CartScreen> {
       cartItems[index]['quantity'] += value;
     });
   }
+
 
   void removeItem(int index) {
     setState(() {
@@ -81,11 +85,11 @@ class _CartScreenState extends State<CartScreen> {
                         icon: const Icon(Icons.remove),
                         onPressed: () => updateQuantity(index, -1),
                       ),
-                      Text('${cartItems[index]['quantity']}',
-                          style: const TextStyle(fontSize: 18)),
-                      IconButton(
-                        icon: const Icon(Icons.add),
-                        onPressed: () => updateQuantity(index, 1),
+                        Text('${cartItems[index]['quantity']}', style: const TextStyle(fontSize: 18)),
+                        IconButton(
+                          icon: const Icon(Icons.add),
+                          onPressed: () => updateQuantity(index, 1),
+
                       ),
                       // TODO: Add remove item button(yousef mohamed)
                       IconButton(
@@ -103,7 +107,7 @@ class _CartScreenState extends State<CartScreen> {
             padding: const EdgeInsets.all(16),
             decoration: const BoxDecoration(
               color: Colors.white,
-              boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 4)],
+              boxShadow: [BoxShadow(color: Colors.black, blurRadius: 10)],
             ),
             child: Column(
               children: [

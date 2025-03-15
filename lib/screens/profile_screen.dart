@@ -8,13 +8,16 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Profile'), centerTitle: true),
+      appBar: AppBar(
+        title: const Text('Profile'),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(height: 20),
 
-            // ✅ TODO: Create profile header with avatar (shahd mohamed)
+            // ✅ TODO: Create profile header with avatar (yousef ahmed)
             const CircleAvatar(
               radius: 60,
               backgroundImage: AssetImage('assets/profile.png'),
@@ -22,10 +25,16 @@ class ProfileScreen extends StatelessWidget {
             const SizedBox(height: 16),
 
             // ✅ TODO: Add user information section (shahd mohamed)
-            const Text('John Doe', style: AppTextStyles.heading1),
+            const Text(
+              'John Doe',
+              style: AppTextStyles.heading1,
+            ),
             const Text(
               'john@example.com',
-              style: TextStyle(color: Colors.grey, fontSize: 14),
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 14,
+              ),
             ),
             const SizedBox(height: 32),
 
@@ -69,7 +78,9 @@ class ProfileScreen extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Logout'),
-          content: const Text('Are you sure you want to logout?'),
+          content: const Text(
+            'Are you sure you want to logout?',
+          ),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
@@ -79,7 +90,11 @@ class ProfileScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).pop();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Logged out successfully!')),
+                  const SnackBar(
+                    content: Text(
+                      'Logged out successfully!',
+                    ),
+                  ),
                 );
               },
               child: const Text('Logout'),
@@ -108,8 +123,16 @@ class SettingsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(icon, color: Colors.blueAccent),
-      title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
+      leading: Icon(
+        icon,
+        color: Colors.blueAccent,
+      ),
+      title: Text(
+        title,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+      ),
       subtitle: Text(subtitle),
       onTap: onTap,
     );

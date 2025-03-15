@@ -19,7 +19,7 @@ class FoodDeliveryApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: AppColors.primary,
         fontFamily: 'Roboto',
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: Colors.grey[50],
       ),
       home: const MainWrapper(),
     );
